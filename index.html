@@ -1,145 +1,86 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>Private List</title>
-	<!--<link rel="stylesheet" href="./style.css">-->
-	<link rel="stylesheet" href="https://drive.google.com/uc?export=view&id=194M9m9BtRC6MORxapXythjcfRxWBf6s4">
-	<script src="https://kit.fontawesome.com/4c390d8bb6.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raffsun Zany</title>
+    <style>
+        body {
+            background-color: #1a1a1a;
+            color: white;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+        }
+        .profile-img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: url('image.jpg') center/cover no-repeat;
+            display: block;
+            margin: 0 auto;
+        }
+        h1 {
+            margin: 10px 0;
+            font-size: 24px;
+        }
+        .links {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            width: 95%; /* Adjusted to make the container wider */
+            max-width: 400px; /* Increased max-width for longer links */
+        }
+        .link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #333;
+            padding: 15px;
+            border-radius: 10px;
+            text-decoration: none;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            gap: 10px;
+            width: 100%; /* Links will take full width of the container */
+            text-align: center;
+        }
+        .link:hover {
+            background-color: #444;
+        }
+        .footer {
+            margin-top: 20px;
+            font-size: 12px;
+            color: #bbb;
+        }
+        .link img {
+            width: 20px;
+            height: 20px;
+        }
+    </style>
 </head>
 <body>
-	<!-- partial:index.partial.html -->
-	<h1>
-		Offline Private List
-	</h1>
-	<h2>
-		All private list for HSC-2024
-	</h2>
-
-	<table class="container">
-		<thead>
-			<tr>
-				<th><h1>Subject</h1></th>
-				<th><h1>Phone No.</h1></th>
-				<th><h1>Name</h1></th>
-				<th><h1>Location</h1></th>
-				<th><h1>Time</h1></th>
-				<th><h1>Jan</h1></th>
-				<th><h1>Feb</h1></th>
-				<th><h1>Mar</h1></th>
-				<th><h1>Apr<br></h1></th>
-				<th><h1>May</h1></th>
-				<th><h1>Jun</h1></th>
-				<th><h1>Jul</h1></th>
-				<th><h1>Aug</h1></th>
-				<th><h1>Sep</h1></th>
-				<th><h1>Oct</h1></th>
-				<th><h1>Nov</h1></th>
-				<th><h1>Dec</h1></th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr>
-				<td>Biology</td>
-				<td>01783397544</td>
-				<td>Zihadi</td>
-				<td>Mohila College Mor</td>
-				<td>11:15 am (Even)</td>
-				<td><i class="fa-solid fa-square-check"></i></td>
-				<td><i class="fa-solid fa-square-check"></i></td>
-				<td><i class="fa-regular fa-square"></i></td>
-				<td><i class="fa-regular fa-square"></i></td>
-				<td><i class="fa-regular fa-square"></i></td>
-				<td><i class="fa-regular fa-square"></i></td>
-				<td><i class="fa-regular fa-square"></i></td>
-				<td><i class="fa-regular fa-square"></i></td>
-				<td><i class="fa-regular fa-square"></i></td>
-				<td><i class="fa-regular fa-square"></i></td>
-				<td><i class="fa-regular fa-square"></i></td>
-				<td><i class="fa-regular fa-square"></i></td>
-			</tr>
-			<tr>
-				<td>H. Math</td>
-				<td>01716170237</td>
-				<td>Jihad</td>
-				<td>Munsipara (Opposite of Museum)</td>
-				<td>8:15 am (Odd)</td>
-				<td></td>
-				<td><i class="fa-solid fa-square-check"></i></td>
-				<td><i class="fa-solid fa-square-check"></i></td>
-				<td><i class="fa-regular fa-square"></i></td>
-				<td><i class="fa-regular fa-square"></i></td>
-				<td><i class="fa-regular fa-square"></i></td>
-				<td><i class="fa-regular fa-square"></i></td>
-				<td><i class="fa-regular fa-square"></i></td>
-				<td><i class="fa-regular fa-square"></i></td>
-				<td><i class="fa-regular fa-square"></i></td>
-				<td><i class="fa-regular fa-square"></i></td>
-				<td><i class="fa-regular fa-square"></i></td>
-			</tr>
-			<tr>
-				<td>Physics</td>
-				<td>01715343554</td>
-				<td>Masud</td>
-				<td>Balubari</td>
-				<td>4:00 pm (Odd)</td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td><i class="fa-regular fa-square"></i></td>
-				<td><i class="fa-regular fa-square"></i></td>
-				<td><i class="fa-regular fa-square"></i></td>
-				<td><i class="fa-regular fa-square"></i></td>
-				<td><i class="fa-regular fa-square"></i></td>
-				<td><i class="fa-regular fa-square"></i></td>
-				<td><i class="fa-regular fa-square"></i></td>
-				<td><i class="fa-regular fa-square"></i></td>
-				<td><i class="fa-regular fa-square"></i></td>
-			</tr>
-			<tr>
-				<td>Chemistry</td>
-				<td>01785498216</td>
-				<td>Roton</td>
-				<td>Shemoli Bas Stand, Kali Tola</td>
-				<td>7:00 am (Even)</td>
-				<td></td>
-				<td><i class="fa-solid fa-square-check"></td>
-				<td><i class="fa-solid fa-square-check"></i></td>
-				<td><i class="fa-regular fa-square"></i></td>
-				<td><i class="fa-regular fa-square"></i></td>
-				<td><i class="fa-regular fa-square"></i></td>
-				<td><i class="fa-regular fa-square"></i></td>
-				<td><i class="fa-regular fa-square"></i></td>
-				<td><i class="fa-regular fa-square"></i></td>
-				<td><i class="fa-regular fa-square"></i></td>
-				<td><i class="fa-regular fa-square"></i></td>
-				<td><i class="fa-regular fa-square"></i></td>
-			</tr>
-			<tr>
-				<td>Bangla</td>
-				<td>---</td>
-				<td>Sabuj</td>
-				<td>Balubari</td>
-				<td>4:00 pm (Even)</td>
-				<td></td>
-				<td><i class=""></td>
-				<td><i class=""></i></td>
-				<td><i class="fa-solid fa-square-check"></i></td>
-				<td><i class="fa-regular fa-square"></i></td>
-				<td><i class="fa-regular fa-square"></i></td>
-				<td><i class="fa-regular fa-square"></i></td>
-				<td><i class="fa-regular fa-square"></i></td>
-				<td><i class="fa-regular fa-square"></i></td>
-				<td><i class="fa-regular fa-square"></i></td>
-				<td><i class="fa-regular fa-square"></i></td>
-				<td><i class="fa-regular fa-square"></i></td>
-			</tr>
-
-		</tbody>
-	</table>
-	<a href="https://www.editey.com/file/194M9m9BtRC6MORxapXythjcfRxWBf6s4" target="_blank">Edit CSS</a>
-	<!-- partial -->
-	<script  src="./script.js"></script>
-
+    <div class="container">
+        <div class="profile-img"></div>
+        <h1>Raffsun Zany</h1>
+        <div class="links">
+            <a href="tg://resolve?domain=raffsun" class="link"><img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg"> Telegram</a>
+            <a href="https://twitter.com/raffsun794" class="link"><img src="https://upload.wikimedia.org/wikipedia/commons/5/53/X_logo_2023_original.svg"> X</a>
+            <a href="https://www.facebook.com/raffsun.zany" class="link"><img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_%282019%29.png"> Facebook</a>
+            <a href="https://www.instagram.com/me.raffsun" class="link"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"> Instagram</a>
+            <a href="https://wa.me/+8801774994794" class="link"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"> WhatsApp</a>
+            <a href="tel:+8801774994794" class="link"><img src="phone.png"> Phone</a>
+        </div>
+        <div class="footer">The page is created by <a href="tg://resolve?domain=raffsun" style="color: #bbb; text-decoration: none;">Raffsun</a></div>
+    </div>
 </body>
 </html>
