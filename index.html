@@ -1,79 +1,93 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Raffsun Zany</title>
-<style>
-    body {
-        background-color: #000000;
-        color: #FFFFFF;
-        font-family: Arial, sans-serif;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        height: 100vh;
-        margin: 0;
-    }
-    .container {
-        text-align: center;
-    }
-    .profile-img {
-        width: 120px;
-        height: 120px;
-        border-radius: 50%;
-        background: center/cover no-repeat;
-        display: block;
-        margin: 0 auto;
-        transition: opacity 1s ease-in-out;
-    }
-    h1 {
-        margin: 10px 0;
-        font-size: 24px;
-    }
-    .links {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-        width: 95%;
-        max-width: 400px;
-    }
-    .link {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-color: #222;
-        padding: 15px;
-        border-radius: 10px;
-        text-decoration: none;
-        color: white;
-        font-size: 16px;
-        font-weight: bold;
-        gap: 10px;
-        width: 100%;
-        text-align: center;
-    }
-    .link:hover {
-        background-color: #444;
-    }
-    .footer {
-        margin-top: 20px;
-        font-size: 12px;
-        color: #FFFFFF;
-    }
-    .link img {
-        width: 20px;
-        height: 20px;
-    }
-    .invert {
-        filter: invert(1) brightness(2);
-    }
-</style>
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raffsun Zany</title>
+    <style>
+        body {
+            background-color: #000000;
+            color: #FFFFFF;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+        }
+        .profile-img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: center/cover no-repeat;
+            display: block;
+            margin: 0 auto;
+            transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+        }
+        h1 {
+            margin: 10px 0;
+            font-size: 24px;
+        }
+        .links {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            width: 95%;
+            max-width: 400px;
+        }
+        .link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #222;
+            padding: 15px;
+            border-radius: 10px;
+            text-decoration: none;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            gap: 10px;
+            width: 100%;
+            text-align: center;
+        }
+        .link:hover {
+            background-color: #444;
+        }
+        .footer {
+            margin-top: 40px;
+            font-size: 12px;
+            color: #FFFFFF;
+            text-align: center;
+        }
+        .footer a {
+            color: #00A2FF; /* Bright color to stand out */
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 14px; /* Slightly larger */
+            transition: all 0.3s ease-in-out;
+        }
+        .footer a:hover {
+            text-decoration: underline; /* Underline on hover */
+            color: #66D9FF; /* Lighter yellow on hover */
+        }
+        .link img {
+            width: 20px;
+            height: 20px;
+        }
+        .invert {
+            filter: invert(1) brightness(2);
+        }
+    </style>
 </head>
 <body>
     <div class="container">
         <div class="profile-img" id="profile"></div>
-        <h1>Raffsun Zany</h1>
+        <h1>MD. RAFFSUN ZANY</h1>
         <div class="links">
             <a href="tg://resolve?domain=raffsun" class="link"><img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg"> Telegram</a>
             <a href="https://twitter.com/raffsun794" class="link"><img src="https://upload.wikimedia.org/wikipedia/commons/5/53/X_logo_2023_original.svg" class="invert"> X (Twitter)</a>
@@ -82,23 +96,33 @@
             <a href="https://wa.me/+8801774994794" class="link"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"> WhatsApp</a>
             <a href="tel:+8801774994794" class="link"><img src="phone.png" class="invert"> Phone</a>
         </div>
-        <div class="footer">The page is created by <a href="tg://resolve?domain=raffsun" style="color: #FFFFFF; text-decoration: none;">Raffsun</a></div>
+        <div class="footer">
+            The page is created by 
+            <a href="mailto:me.raffsun@outlook.com">Raffsun</a>
+        </div>
     </div>
+
     <script>
-    const images = ['image1.jpg', 'image2.jpg', 'image3.jpg']; // Add your image paths
-    let currentIndex = 0;
-    const profile = document.getElementById('profile');function changeImage() {
-    profile.style.opacity = 0;
-    setTimeout(() => {
-        profile.style.backgroundImage = `url(${images[currentIndex]})`;
-        profile.style.opacity = 1;
-        currentIndex = (currentIndex + 1) % images.length;
-    }, 1000);
-}
+        const images = ['image1.jpg', 'image2.jpg', 'image3.jpg']; // Replace with actual image URLs
+        let currentIndex = 0;
+        const profile = document.getElementById('profile');
 
-profile.style.backgroundImage = `url(${images[0]})`;
-setInterval(changeImage, 5000);
-</script>
+        function changeImage() {
+            profile.style.opacity = 0;
+            profile.style.transform = 'scale(0.8) rotate(-10deg)';
 
+            setTimeout(() => {
+                profile.style.backgroundImage = `url(${images[currentIndex]})`;
+                profile.style.opacity = 1;
+                profile.style.transform = 'scale(1) rotate(0deg)';
+                currentIndex = (currentIndex + 1) % images.length;
+            }, 800);
+        }
+
+        window.onload = () => {
+            profile.style.backgroundImage = `url(${images[0]})`;
+            setInterval(changeImage, 3000);
+        };
+    </script>
 </body>
 </html>
