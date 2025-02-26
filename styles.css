@@ -1,0 +1,319 @@
+body {
+background-color: #0C090A;
+color: #FFFFFF;
+font-family: Arial, sans-serif;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+height: 100vh;
+margin: 0;
+position: relative;
+}
+.container {
+text-align: center;
+position: relative;
+width: 90%;
+max-width: 400px;
+}
+
+/* Profile Image */    
+.profile-img-container {    
+    width: 120px;    
+    height: 120px;    
+    border-radius: 50%;    
+    overflow: hidden;    
+    position: relative;    
+    background: black;    
+    z-index: 2; /* Keeps image above the dots */    
+}    
+.profile-img {    
+    width: 100%;    
+    height: 100%;    
+    border-radius: 50%;    
+    background: center/cover no-repeat;    
+    transition: opacity 1s ease-in-out;    
+}    
+
+/* Animated Dots */    
+.circle {    
+    position: absolute;    
+    top: 50%;    
+    left: 50%;    
+    width: 160px; /* Updated size */    
+    height: 160px;    
+    margin: -80px 0 0 -80px; /* Adjusted for 160px size */    
+    border-radius: 50%;    
+    background: transparent;    
+    z-index: 1; /* Dots stay behind the image */    
+    animation: rotateBorder 15s linear infinite; /* Rotate the circle */    
+}    
+
+/* Dot styling */    
+span.dot {    
+    position: absolute;    
+    width: 10px; /* Smaller dots */    
+    height: 100%;    
+    top: 0;    
+    left: 50%;    
+    margin-left: -5px; /* Center the dot horizontally */    
+}    
+span.dot:after {    
+    content: '';    
+    position: absolute;    
+    left: 0;    
+    top: 0;    
+    display: block;    
+    width: 10px; /* Smaller dots */    
+    height: 10px;    
+    background-color: #FFFFFF; /* Default white color */    
+    border-radius: 50%;    
+}    
+
+/* Make the 5,10,15 dot red */    
+span.dot.no5:after {    
+    background-color: #FF0000; /* Red color */    
+}    
+span.dot.no10:after {    
+    background-color: #00FF00; /* Green color */    
+}    
+span.dot.no15:after {    
+    background-color: #0000FF; /* Blue color */    
+}    
+
+/* Dot animations */    
+span.dot.no1 { animation: animatedDotOne 15s ease infinite; }    
+span.dot.no2 { animation: animatedDotTwo 15s ease infinite; }    
+span.dot.no3 { animation: animatedDotThree 15s ease infinite; }    
+span.dot.no4 { animation: animatedDotFour 15s ease infinite; }    
+span.dot.no5 { animation: animatedDotFive 15s ease infinite; }    
+span.dot.no6 { animation: animatedDotSix 15s ease infinite; }    
+span.dot.no7 { animation: animatedDotSeven 15s ease infinite; }    
+span.dot.no8 { animation: animatedDotEight 15s ease infinite; }    
+span.dot.no9 { animation: animatedDotNine 15s ease infinite; }    
+span.dot.no10 { animation: animatedDotTen 15s ease infinite; }    
+span.dot.no11 { animation: animatedDotEleven 15s ease infinite; }    
+span.dot.no12 { animation: animatedDotTwelve 15s ease infinite; }    
+span.dot.no13 { animation: animatedDotThirteen 15s ease infinite; }    
+span.dot.no14 { animation: animatedDotFourteen 15s ease infinite; }    
+span.dot.no15 { animation: animatedDotFifteen 15s ease infinite; }    
+
+/* Keyframes for dot animations */    
+@keyframes animatedDotOne {    
+    0%, 58%, 100% { transform: translate(0, 0); }    
+    8%, 50% { transform: translate(0, 80px); } /* Adjusted for 160px size */    
+}    
+@keyframes animatedDotTwo {    
+    0%, 2%, 60%, 100% { transform: rotate(24deg) translate(0, 0); }    
+    10%, 52% { transform: rotate(24deg) translate(0, 80px); }    
+}    
+@keyframes animatedDotThree {    
+    0%, 4%, 62%, 100% { transform: rotate(48deg) translate(0, 0); }    
+    12%, 54% { transform: rotate(48deg) translate(0, 80px); }    
+}    
+@keyframes animatedDotFour {    
+    0%, 6%, 64%, 100% { transform: rotate(72deg) translate(0, 0); }    
+    14%, 56% { transform: rotate(72deg) translate(0, 80px); }    
+}    
+@keyframes animatedDotFive {    
+    0%, 8%, 66%, 100% { transform: rotate(96deg) translate(0, 0); }    
+    16%, 58% { transform: rotate(96deg) translate(0, 80px); }    
+}    
+@keyframes animatedDotSix {    
+    0%, 10%, 68%, 100% { transform: rotate(120deg) translate(0, 0); }    
+    18%, 60% { transform: rotate(120deg) translate(0, 80px); }    
+}    
+@keyframes animatedDotSeven {    
+    0%, 12%, 70%, 100% { transform: rotate(144deg) translate(0, 0); }    
+    20%, 62% { transform: rotate(144deg) translate(0, 80px); }    
+}    
+@keyframes animatedDotEight {    
+    0%, 14%, 72%, 100% { transform: rotate(168deg) translate(0, 0); }    
+    22%, 64% { transform: rotate(168deg) translate(0, 80px); }    
+}    
+@keyframes animatedDotNine {    
+    0%, 16%, 74%, 100% { transform: rotate(192deg) translate(0, 0); }    
+    24%, 66% { transform: rotate(192deg) translate(0, 80px); }    
+}    
+@keyframes animatedDotTen {    
+    0%, 18%, 76%, 100% { transform: rotate(216deg) translate(0, 0); }    
+    26%, 68% { transform: rotate(216deg) translate(0, 80px); }    
+}    
+@keyframes animatedDotEleven {    
+    0%, 20%, 78%, 100% { transform: rotate(240deg) translate(0, 0); }    
+    28%, 70% { transform: rotate(240deg) translate(0, 80px); }    
+}    
+@keyframes animatedDotTwelve {    
+    0%, 22%, 80%, 100% { transform: rotate(264deg) translate(0, 0); }    
+    30%, 72% { transform: rotate(264deg) translate(0, 80px); }    
+}    
+@keyframes animatedDotThirteen {    
+    0%, 24%, 82%, 100% { transform: rotate(288deg) translate(0, 0); }    
+    32%, 74% { transform: rotate(288deg) translate(0, 80px); }    
+}    
+@keyframes animatedDotFourteen {    
+    0%, 26%, 84%, 100% { transform: rotate(312deg) translate(0, 0); }    
+    34%, 76% { transform: rotate(312deg) translate(0, 80px); }    
+}    
+@keyframes animatedDotFifteen {    
+    0%, 28%, 86%, 100% { transform: rotate(336deg) translate(0, 0); }    
+    36%, 78% { transform: rotate(336deg) translate(0, 80px); }    
+}    
+
+/* Rotate the circle */    
+@keyframes rotateBorder {    
+    0% { transform: rotate(0deg); }    
+    100% { transform: rotate(360deg); }    
+}    
+
+/* Links and Footer */    
+h1 {    
+    margin: 30px 0;    
+    font-size: 24px;    
+}    
+.links {    
+    display: flex;    
+    flex-direction: column;    
+    align-items: center;    
+    gap: 10px;    
+    width: 100%;    
+}    
+.link {    
+    display: flex;    
+    align-items: center;    
+    justify-content: center;    
+    background-color: #222;    
+    padding: 15px;    
+    border-radius: 10px;    
+    text-decoration: none;    
+    color: white;    
+    font-size: 16px;    
+    font-weight: bold;    
+    gap: 10px;    
+    width: 60%;    
+    text-align: center;    
+}    
+.link:hover {    
+    background-color: #444;    
+}    
+.footer {    
+    margin-top: 40px;    
+    font-size: 12px;    
+    color: #FFFFFF;    
+    text-align: center;    
+}    
+.footer a {    
+    color: #00A2FF;    
+    text-decoration: none;    
+    font-weight: bold;    
+    font-size: 14px;    
+    transition: all 0.3s ease-in-out;    
+}    
+.footer a:hover {    
+    text-decoration: underline;    
+    color: #66D9FF;    
+}    
+.link img {    
+    width: 20px;    
+    height: 20px;    
+}    
+.invert {    
+    filter: invert(1) brightness(2);    
+}    
+
+/* Responsive Fixes */    
+@media screen and (max-width: 480px) {    
+    h1 {    
+        font-size: 20px;    
+    }    
+    .circle {    
+        width: 140px; /* Adjusted for smaller screens */    
+        height: 140px;    
+        margin: -70px 0 0 -70px;    
+    }    
+    .profile-img-container {    
+        width: 100px;    
+        height: 100px;    
+    }    
+    .link {    
+        font-size: 14px;    
+        padding: 12px;    
+    }    
+}
+/* Loader Styles */
+.loader {
+    width: 120px;
+    height: 120px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000; /* Ensure it's above everything */
+}
+
+.loader svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    animation: rotate 4s linear infinite;
+}
+
+.loader svg .square {
+    fill: none;
+    stroke: url(#neonGradient); /* Gradient Stroke */
+    stroke-width: 6px;
+    stroke-linecap: round;
+    stroke-dasharray: 320;
+    stroke-dashoffset: 320;
+    animation: draw-square 3s ease-in-out infinite, pulsate-square 1.5s infinite alternate;
+}
+
+.loader svg .dot {
+    fill: #ff007f;
+    animation: move-dot 1.5s linear infinite, pulse-dot 0.75s infinite alternate;
+}
+
+@keyframes rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes draw-square {
+    0% { stroke-dashoffset: 320; }
+    50% { stroke-dashoffset: 0; }
+    100% { stroke-dashoffset: -320; }
+}
+
+@keyframes pulsate-square {
+    0% { stroke-width: 6px; }
+    100% { stroke-width: 8px; }
+}
+
+@keyframes move-dot {
+    0% { cx: 10; cy: 10; }
+    25% { cx: 90; cy: 10; }
+    50% { cx: 90; cy: 90; }
+    75% { cx: 10; cy: 90; }
+    100% { cx: 10; cy: 10; }
+}
+
+@keyframes pulse-dot {
+    0% { r: 6; }
+    100% { r: 8; }
+}
+
+/* Black Background for Loader */
+body.loading {
+    background-color: #000000; /* black background */
+    overflow: hidden; /* Prevent scrolling during loading */
+}
+
+/* Main Content Styles */
+.container {
+    text-align: center;
+    position: relative;
+    width: 90%;
+    max-width: 400px;
+    margin: 0 auto;
+    padding-top: 20px;
+}
